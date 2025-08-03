@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Records</title>
+</head>
+<body>
+    <h1>Health Records</h1>
+    <table border="1">
+        <tr>
+            <th>Age</th><th>Gender</th><th>Height</th><th>Weight</th>
+            <th>Smoker</th><th>Exercise</th><th>Diet</th><th>Risk</th>
+        </tr>
+        {% for r in records %}
+        <tr>
+            <td>{{ r.age }}</td><td>{{ r.gender }}</td><td>{{ r.height }}</td><td>{{ r.weight }}</td>
+            <td>{{ r.smoker }}</td><td>{{ r.exercise_frequency }}</td><td>{{ r.diet_quality }}</td><td>{{ r.disease_risk }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
